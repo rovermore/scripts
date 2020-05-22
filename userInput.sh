@@ -1,13 +1,15 @@
 #! /bin/bash
 
-echo "Hello world" #this is a comment in shell scripting
-echo $BASH
-echo $BASH_VERSION
-echo $PWD
-echo $HOME
-
 name=Rober
 echo The name is $name > file.txt #Redirect to a file
+
+#read arguments passed from bash for example: ./userinput.sh green orange yellow
+#echo $1 $2 $3
+
+#saves arguments into an array
+args=("$@")
+echo $2
+echo ${args[0]}
 
 echo "enter your name: "
 read name lastname
